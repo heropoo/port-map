@@ -30,6 +30,9 @@ use Channel\Server as ChannelServer;
 //    echo "Connection closed\n";
 //};
 
+Worker::$pidFile = __DIR__.'/../runtime/test-channel-server.pid';
+Worker::$logFile = __DIR__.'/../runtime/test-channel-server.log';
+
 //Tcp 通讯方式
 $channelServer = new ChannelServer("0.0.0.0", 2206);
 
