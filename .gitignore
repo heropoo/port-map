@@ -1,1 +1,4 @@
-*.exe
+/vendor/
+.idea/
+composer.lock
+.phpunit.*
