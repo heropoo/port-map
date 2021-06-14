@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [ master, php ]
+    branches: [ main, php ]
   pull_request:
-    branches: [ master, php ]
+    branches: [ main, php ]
 
 jobs:
   PHPUnit:

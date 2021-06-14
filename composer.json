@@ -1,6 +1,7 @@
 {
     "name": "heropoo/portmap",
     "type": "project",
+    "description": "port map",
     "license": "MIT",
     "authors": [
         {
@@ -9,19 +10,19 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.0",
         "workerman/workerman": "^4.0",
         "workerman/channel": "^1.1",
         "vlucas/phpdotenv": "^5.3",
         "symfony/yaml": "^5.3"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "app"
         }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "*"
     },
     "autoload-dev": {
         "psr-4": {
