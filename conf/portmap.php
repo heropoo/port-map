@@ -1,16 +1,16 @@
 <?php
 /**
- * Port Map Config
+ * PortMap Config
  */
 
 return [
     'server' => [
-        //'host' => '127.0.0.1',
+        'host' => '127.0.0.1',
         'port' => 9100
     ],
     'port_map' => [
         [
-            'protocol' => 'tcp',
+            'protocol' => 'tcp', // tcp udp
             'remote_port' => 9101,
             'local_host' => '127.0.0.1',
             'local_port' => 22,
