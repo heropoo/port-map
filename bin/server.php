@@ -10,6 +10,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Workerman\Worker;
+use Workerman\Connection\TcpConnection;
 
 $config = require __DIR__ . '/../conf/portmap.php';
 
@@ -19,7 +20,7 @@ $worker = new Worker("tcp://0.0.0.0:" . $config['server']['port']);
 $worker->count = 4;
 
 // 当客户端发来数据时
-$worker->onMessage = function ($connection, $data) {
+$worker->onMessage = function (TcpConnection $connection, $data) {
     // 向客户端发送hello $data
     $connection->send('hello ' . $data);
 };

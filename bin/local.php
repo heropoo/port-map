@@ -7,6 +7,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Workerman\Worker;
+use Workerman\Connection\TcpConnection;
 
 $config = require __DIR__ . '/../conf/portmap.php';
 
@@ -18,7 +19,7 @@ foreach ($config['port_map'] as $key => $item){
     $worker->count = 4;
 
     // 当客户端发来数据时
-    $worker->onMessage = function ($connection, $data) {
+    $worker->onMessage = function (TcpConnection $connection, $data) {
         // 向客户端发送hello $data
         $connection->send('hello ' . $data);
     };
